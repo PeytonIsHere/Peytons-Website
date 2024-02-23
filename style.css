@@ -1,19 +1,24 @@
+/* style.css */
+
 body {
     background-color: #2c3e50; /* Dark teal background color */
     color: #fff; /* White text color */
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 50px;
-  }
-  h1 {
+}
+
+h1 {
     font-size: 36px;
     margin-bottom: 20px;
-  }
-  p {
+}
+
+p {
     font-size: 18px;
     line-height: 1.6;
-  }
-  .navbar {
+}
+
+.navbar {
     background-color: #808080; /* Solid gray color */
     border-radius: 20px; /* Rounded edges */
     padding: 10px 20px; /* Add padding for better appearance */
@@ -24,7 +29,7 @@ body {
 }
 
 .navbar a {
-    color: black; /* Text color */
+    color: #000; /* Black text color */
     text-decoration: none; /* Remove underline from links */
     margin: 0 10px; /* Add margin between links */
     padding: 5px 10px; /* Add padding for better appearance */
