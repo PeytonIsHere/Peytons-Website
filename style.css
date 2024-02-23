@@ -14,7 +14,7 @@ body {
     line-height: 1.6;
   }
   .navbar {
-    background-color: rgba(169, 169, 169, 0.5); /* Gray color with 50% transparency */
+    background-color: #808080; /* Solid gray color */
     border-radius: 20px; /* Rounded edges */
     padding: 10px 20px; /* Add padding for better appearance */
     position: fixed; /* Fixed position to stay on top */
