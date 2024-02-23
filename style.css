@@ -13,3 +13,19 @@ body {
     font-size: 18px;
     line-height: 1.6;
   }
+  .navbar {
+    background-color: rgba(169, 169, 169, 0.5); /* Gray color with 50% transparency */
+    border-radius: 20px; /* Rounded edges */
+    padding: 10px 20px; /* Add padding for better appearance */
+    position: fixed; /* Fixed position to stay on top */
+    width: 100%; /* Full width */
+    top: 0; /* Stick to the top */
+    z-index: 999; /* Ensure it stays on top of other content */
+}
+
+.navbar a {
+    color: black; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 10px; /* Add margin between links */
+    padding: 5px 10px; /* Add padding for better appearance */
+}
