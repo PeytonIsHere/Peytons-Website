@@ -1,0 +1,212 @@
+/* Style for nav bar text */
+.nav-link {
+    /* Add the styles of your nav bar text here */
+    font-family: 'Arial', sans-serif;
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #ffffff; /* Adjust the color as needed */
+    /* Add any other styles */
+}
+
+/* Glitch effect */
+.glitch {
+    /* Add the glitch effect styles here */
+    font-size: inherit; /* Set font size to inherit from parent */
+    font-family: 'Raleway', sans-serif; /* Set the glitch font */
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    margin: 0;
+    color: #fff;
+    letter-spacing: 0.1em; /* Adjust letter spacing as needed */
+
+    &:before, &:after {
+        display: block;
+        content: attr(data-content);
+        text-transform: uppercase;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: .8;
+    } 
+    &:after {
+        color: darkgray;
+        z-index: -2;
+    } 
+    &:before {
+        color: lightblue;
+        z-index: -1;
+    }
+    &:hover {
+        &:before {
+            animation: glitch .5s cubic-bezier(0.25, 0.1, 0.25, 1) both 5;
+        }
+        &:after {
+            animation: glitch .5s cubic-bezier(0.25, 0.1, 0.25, 1) reverse both 5;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .glitch {
+        font-size: inherit; /* Set font size to inherit from parent */
+    }
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    2% {
+        transform: translate(-1px, -1px);
+    }
+    4% {
+        transform: translate(2px, 2px);
+    }
+    6% {
+        transform: translate(-2px, 1px);
+    }
+    8% {
+        transform: translate(1px, -2px);
+    }
+    10% {
+        transform: translate(2px, -1px);
+    }
+    12% {
+        transform: translate(-1px, 2px);
+    }
+    14% {
+        transform: translate(-2px, -1px);
+    }
+    16% {
+        transform: translate(1px, 2px);
+    }
+    18% {
+        transform: translate(-1px, 1px);
+    }
+    20% {
+        transform: translate(2px, -2px);
+    }
+    22% {
+        transform: translate(-2px, 2px);
+    }
+    24% {
+        transform: translate(1px, 1px);
+    }
+    26% {
+        transform: translate(2px, 2px);
+    }
+    28% {
+        transform: translate(-1px, -1px);
+    }
+    30% {
+        transform: translate(-2px, -2px);
+    }
+    32% {
+        transform: translate(1px, 1px);
+    }
+    34% {
+        transform: translate(2px, -2px);
+    }
+    36% {
+        transform: translate(-1px, 1px);
+    }
+    38% {
+        transform: translate(2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    42% {
+        transform: translate(1px, -1px);
+    }
+    44% {
+        transform: translate(-2px, 1px);
+    }
+    46% {
+        transform: translate(2px, -2px);
+    }
+    48% {
+        transform: translate(-1px, 1px);
+    }
+    50% {
+        transform: translate(-2px, 2px);
+    }
+    52% {
+        transform: translate(1px, -1px);
+    }
+    54% {
+        transform: translate(-2px, -2px);
+    }
+    56% {
+        transform: translate(2px, 1px);
+    }
+    58% {
+        transform: translate(-1px, -1px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    62% {
+        transform: translate(1px, -1px);
+    }
+    64% {
+        transform: translate(-2px, 2px);
+    }
+    66% {
+        transform: translate(-1px, 1px);
+    }
+    68% {
+        transform: translate(2px, -2px);
+    }
+    70% {
+        transform: translate(-2px, 1px);
+    }
+    72% {
+        transform: translate(1px, 1px);
+    }
+    74% {
+        transform: translate(2px, -2px);
+    }
+    76% {
+        transform: translate(-1px, 1px);
+    }
+    78% {
+        transform: translate(-2px, -2px);
+    }
+    80% {
+        transform: translate(1px, -1px);
+    }
+    82% {
+        transform: translate(-2px, 2px);
+    }
+    84% {
+        transform: translate(2px, 1px);
+    }
+    86% {
+        transform: translate(1px, 1px);
+    }
+    88% {
+        transform: translate(-2px, -2px);
+    }
+    90% {
+        transform: translate(2px, 2px);
+    }
+    92% {
+        transform: translate(-1px, -1px);
+    }
+    94% {
+        transform: translate(-2px, 2px);
+    }
+    96% {
+        transform: translate(1px, -1px);
+    }
+    98% {
+        transform: translate(2px, 2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
