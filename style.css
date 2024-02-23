@@ -26,15 +26,26 @@ p {
     top: 0;
     width: 90%;
     margin-top: 10px;
-    padding: 10px;
+    /* padding: 10px; */
     opacity: 0.9; /* Initial opacity */
     font-weight: bold;
     transition: 0.5s;
+
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align items to the start */
 }
 
 .navbar a {
     color: #000; /* Black text color */
     text-decoration: none; /* Remove underline from links */
     margin: 0 10px; /* Add margin between links */
-    padding: 5px 10px; /* Adjusted padding */
+    padding-top: 1px; 
+    padding-bottom: 1px;
+}
+
+.navbar img {
+    height: 95%; /* Set the height of the image to 100% of the navbar height */
+    margin-right: 10px;
+    margin-left: 0px;
 }
