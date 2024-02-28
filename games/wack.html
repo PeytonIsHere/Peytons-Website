@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whack-a-Mole</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #87CEEB;
+    }
+    #container {
+      position: relative;
+    }
+    .hole {
+      width: 100px;
+      height: 100px;
+      background-image: url('../photos/hole.png'); /* Change this URL to your custom mole image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+    .mole {
+      width: 100px;
+      height: 100px;
+      background-image: url('../photos/eric.png'); /* Change this URL to your custom mole image */
+      background-size: cover;
+      position: absolute;
+      bottom: -100px;
+      transition: bottom 0.3s ease-in-out;
+    }
+    #score {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="score">Score: 0</div>
+  <div id="container">
+    <!-- <div id="score">Score: 0</div> -->
+    <div class="hole" onclick="whack(event)"><div class="mole"></div></div>
+    <div class="hole" onclick="whack(event)"><div class="mole"></div></div>
+    <div class="hole" onclick="whack(event)"><div class="mole"></div></div>
+    <div class="hole" onclick="whack(event)"><div class="mole"></div></div>
+    <div class="hole" onclick="whack(event)"><div class="mole"></div></div>
+    <div class="hole" onclick="whack(event)"><div class="mole"></div></div>
+  </div>
+
+  <script>
+    let score = 0;
+
+    function whack(event) {
+      if (event.target.classList.contains('mole')) {
+        score++;
+        document.getElementById('score').textContent = `Score: ${score}`;
+        event.target.style.bottom = '-100px';
+      }
+    }
+
+    function popMole() {
+      const holes = document.querySelectorAll('.hole');
+      const randomHole = holes[Math.floor(Math.random() * holes.length)];
+      const mole = randomHole.querySelector('.mole');
+      mole.style.bottom = '0';
+      setTimeout(() => {
+        mole.style.bottom = '-100px';
+      }, 1000);
+    }
+
+    setInterval(popMole, 1500);
+  </script>
+</body>
+</html>

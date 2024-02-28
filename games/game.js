@@ -1,7 +1,6 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
-// Load your custom images for the dinosaur and obstacles
 const dinosaurImage = new Image();
 dinosaurImage.src = 'eric.png'; // Path to your dinosaur image
 const obstacleImage = new Image();
@@ -20,15 +19,27 @@ const obstacles = [];
 
 let gameSpeed = 3;
 let gravity = 1;
+let gameOver = false;
 
 function jump() {
-    if (!dinosaur.jumping) {
+    if (!dinosaur.jumping && !gameOver) {
         dinosaur.velocityY = -20;
         dinosaur.jumping = true;
     }
 }
 
-document.addEventListener('keydown', jump);
+document.addEventListener('keydown', event => {
+    if (event.code === 'Space') {
+        jump();
+    }
+});
+
+function restartGame() {
+    gameOver = false;
+    dinosaur.y = canvas.height - 50;
+    obstacles.length = 0; // Clear obstacles array
+    draw();
+}
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -68,8 +79,11 @@ function draw() {
             dinosaur.y + dinosaur.height > obstacle.y
         ) {
             // Game over
-            alert('Game Over!');
-            location.reload(); // Reload the page to restart the game
+            gameOver = true;
+            ctx.fillStyle = 'red';
+            ctx.font = '30px Arial';
+            ctx.fillText('Game Over', canvas.width / 2 - 80, canvas.height / 2 - 15);
+            ctx.fillText('Press Space to Restart', canvas.width / 2 - 150, canvas.height / 2 + 30);
         }
     }
 
@@ -78,7 +92,9 @@ function draw() {
         obstacles.shift();
     }
 
-    requestAnimationFrame(draw);
+    if (!gameOver) {
+        requestAnimationFrame(draw);
+    }
 }
 
 draw();
