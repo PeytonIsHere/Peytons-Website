@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eric Facts - Foxi Run!</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="DinoGame/DinoStyles.css" />
+  </head>
+
+  <body
+    style="
+      background-image: url('/DinoGame/img/FoxInFurrest.png');
+      background-size: cover;
+      font-family: 'Courier New', Courier, monospace;
+    "
+  >
+    <header>
+      <nav>
+        <ul>
+          <h1>
+            <li>
+              <a href="index.html"> Eric Facts </a>
+            </li>
+            <li>
+              <a href="EricFacts.html"> Narcissism </a>
+            </li>
+            <li>
+              <a href="PeopleFacts.html"> Facts </a>
+            </li>
+            <li>
+              <a href="Surprise.html"> Surprise </a>
+            </li>
+            <li>
+              <a href="FoxiRun.html"> Foxi Run! </a>
+            </li>
+          </h1>
+        </ul>
+      </nav>
+    </header>
+
+    <h2 style="text-align: center;">Foxi Run!</h2>
+    <h3 style="text-align: center;">It's <i>J A N K Y</i></h3>
+    <p style="text-align: center;">
+      Press any key to jump. <br />
+      <i
+        >And because programming is hard, yer better play this on the computer,
+        also space scrolls instead of jumps, maybe.</i
+      >
+    </p>
+    <div class="game">
+      <div id="dino"></div>
+      <div id="cactus"></div>
+      <h1
+        style="text-align: center; background-color: rgba(255, 0, 0, 0.49);"
+        id="Death"
+      >
+        YOU DIED YA DINGUS!
+      </h1>
+    </div>
+    <div style="text-align: center; font-size: large;" id="Score"></div>
+    <div
+      style="text-align: center; font-size: large;"
+      id="HighScoreDisplay"
+    ></div>
+    <div style="text-align: center; font-size: large;" id="DeathDisplay"></div>
+    <script src="DinoGame/DinoScript.js"></script>
+    <p style="text-align: center;">Progress doesn't save.</p>
+  </body>
+</html>
