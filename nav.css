@@ -16,12 +16,20 @@
 
     display: flex;
     align-items: center;
-    justify-content: left;
-    padding: 5px 7px;
+    justify-content: center;
+    /* padding: 5px 7px; */
+}
+.left {
+    display: flex;
+    align-items: center;
 }
 .logo {
     display: flex;
     justify-content: center;
+}
+.right {
+    display: flex;
+    align-items: center;
 }
 
 .navbar a {
