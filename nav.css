@@ -1,5 +1,6 @@
+/* Navbar styling */
 .navbar {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 7px;
   position: fixed;
@@ -7,7 +8,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 40%;
-  opacity: 0.9;
+  /* opacity: 0.9; */
   font-weight: bold;
   transition: 0.6s;
   height: 35px;
@@ -17,15 +18,13 @@
   justify-content: space-between;
 }
 
+/* Common styling for left and right links */
 .left-links, .right-links {
   display: flex;
   align-items: center;
 }
 
-/* .right-links {
-  margin-left: auto;
-} */
-
+/* Styling for navbar links */
 .navbar a {
   color: #000;
   text-decoration: none;
@@ -35,61 +34,69 @@
   display: inline-block;
 }
 
+/* Styling for the logo */
 .logo {
   flex: 1;
   text-align: center;
 }
 
+/* Styling for navbar images */
 .navbar img {
-    height: 95%;
-    margin-left: 0px;
+  height: 95%;
+  margin-left: 0px;
 }
 
+/* Hover effect for navbar links */
 .navbar a:hover {
-  background-color: gray; /* Change the color on hover */
+  background-color: gray;
   border-radius: 5px;
 }
+
+/* Hide nav-links by default */
 .nav-links {
   display: none;
 }
 
 /* Media Query for Dropdown Menu */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 990px) {
+  /* Hide both left and right links by default */
   .left-links, .right-links {
-    display: none; /* Hide both left and right links by default */
-  }
-  .nav-links {
     display: none;
-    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Show nav-links dropdown menu */
+  .nav-links {
+    backdrop-filter: blur(10px);
+    display: none;
+    background-color: rgba(255, 255, 255, 0.1);
     position: absolute;
     top: calc(100% + 10px);
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.2);
     min-width: 160px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
     z-index: 1;
+    border-radius: 7px;
   }
 
+  /* Show nav-links dropdown menu on hover */
   .navbar:hover .nav-links {
     display: block;
-    /* flex-direction: column;  */
   }
 
+  /* Styling for nav-links in dropdown menu */
   .nav-links {
-    align-items: flex-start; /* Align left links to the top */
+    align-items: flex-start;
   }
 
-  .nav-links a,
   .nav-links a {
     display: block;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: 0.5s;
   }
 
-  .nav-links a:hover,
+  /* Hover effect for nav-links in dropdown menu */
   .nav-links a:hover {
     background-color: gray;
   }
