@@ -55,6 +55,7 @@
 /* Hide nav-links by default */
 .nav-links {
   display: none;
+  backdrop-filter: blur(10px);
 }
 
 /* Media Query for Dropdown Menu */
@@ -67,7 +68,7 @@
   /* Show nav-links dropdown menu */
   .nav-links {
     backdrop-filter: blur(10px);
-    display: none;
+    /* display: none; */
     background-color: rgba(255, 255, 255, 0.1);
     position: absolute;
     top: calc(100% + 10px);
@@ -95,8 +96,8 @@
     text-decoration: none;
     transition: 0.5s;
   }
-
   /* Hover effect for nav-links in dropdown menu */
+
   .nav-links a:hover {
     background-color: gray;
   }
