@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple</title>
+    <style>
+        body {
+            background-color: #2c3e50;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 7px;
+            position: fixed;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+            font-weight: bold;
+            transition: 0.6s;
+            height: 35px;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Common styling for left and right links */
+        .left-links, .right-links {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Styling for navbar links */
+        .navbar a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 10px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            display: inline-block;
+        }
+
+        /* Styling for the logo */
+        .logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        /* Styling for navbar images */
+        .navbar img {
+            height: 95%;
+            margin-left: 0px;
+        }
+
+        /* Hover effect for navbar links */
+        .navbar a:hover {
+            background-color: gray;
+            border-radius: 5px;
+        }
+
+        /* Hide nav-links by default */
+        .nav-links {
+            display: none;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Media Query for Dropdown Menu */
+        @media only screen and (max-width: 990px) {
+            /* Hide both left and right links by default */
+            .left-links, .right-links {
+                display: none;
+            }
+
+            /* Show nav-links dropdown menu */
+            .nav-links {
+                backdrop-filter: blur(10px);
+                background-color: rgba(255, 255, 255, 0.1);
+                position: absolute;
+                top: calc(100% + 10px);
+                left: 50%;
+                transform: translateX(-50%);
+                min-width: 160px;
+                z-index: 1;
+                border-radius: 7px;
+            }
+
+            /* Show nav-links dropdown menu on hover */
+            .navbar:hover .nav-links {
+                display: block;
+            }
+
+            /* Styling for nav-links in dropdown menu */
+            .nav-links {
+                align-items: flex-start;
+            }
+
+            .nav-links a {
+                display: block;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                transition: 0.5s;
+            }
+
+            /* Hover effect for nav-links in dropdown menu */
+            .nav-links a:hover {
+                background-color: gray;
+            }
+        }
+    </style>
+    <script>
+        // script.js
+        var scrollTimer; // Declare a variable to store the scroll timer
+
+        // Function to handle scroll events
+        function handleScroll() {
+            var navbar = document.querySelector(".navbar");
+
+            // Change background color and opacity when scrolling
+            if (window.scrollY > 20) {
+                navbar.style.opacity = "0.3";
+            } else {
+                navbar.style.opacity = "0.9";
+            }
+
+            // Clear the previous scroll timer and start a new one
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(function() {
+                navbar.style.opacity = "0.9";
+            }, 500); // Adjust the delay (in milliseconds) as needed
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="left-links">
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="logo">
+            <a href="index.html"><h2>PEYTON</h2></a>
+        </div>
+        <div class="right-links">
+            <a href="games/games.html">Games</a>
+            <a href="Awarning.html">Eric Facts</a>
+        </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="games/games.html">Games</a>
+            <a href="Awarning.html">Eric Facts</a>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque minus qui doloribus voluptates dignissimos quod vel repellendus, hic excepturi magni quibusdam suscipit, aliquid saepe, earum adipisci. Nulla eligendi beatae facilis similique, illo error excepturi perspiciatis sed eaque aliquam saepe ut itaque amet omnis provident et, deserunt consequatur praesentium, modi deleniti sint commodi! Ducimus debitis, iure libero laboriosam repellendus explicabo vel temporibus quia dolorum! Alias vero cum laborum explicabo natus, ullam placeat molestias sapiente amet temporibus, magnam doloribus delectus repudiandae rerum inventore, minima iure magni veritatis nemo praesentium dignissimos? Consequatur voluptate repellendus quae esse iste vitae assumenda magni consectetur ducimus! Animi, sit. Voluptate, inventore tempora. Officiis blanditiis quo nobis, odit illo quas a consectetur ipsa nostrum aperiam voluptate ab, ducimus tenetur incidunt maxime temporibus numquam adipisci repudiandae eum! Dolor adipisci consequatur eos non ab cupiditate quisquam accusamus fugiat aspernatur blanditiis, eum hic? A, porro autem. Iure quasi perferendis quis laudantium voluptates facere earum recusandae porro facilis repellat provident quo modi, consequatur libero harum aut assumenda error adipisci eaque aliquam. Autem id totam sit facilis in deleniti cumque nemo reiciendis soluta dolorum sequi beatae sapiente quos nobis harum laboriosam nostrum saepe vel natus quas, repellat esse molestias laborum. Officiis minus incidunt accusantium et architecto esse magnam omnis quis illum praesentium est aperiam odio fugit quaerat, aut quod tempore, quo fuga fugiat? Aspernatur soluta consequatur ratione quasi delectus nobis, voluptates laborum ea earum architecto molestiae. Eaque voluptatum aliquam nemo neque recusandae autem provident, harum atque odit quas expedita magni fuga, vitae error exercitationem mollitia non eum veritatis, labore beatae voluptates blanditiis rerum ab. Ad dolorum nam facere recusandae totam dicta vero reiciendis et ipsa eveniet aliquid placeat veniam dignissimos voluptatum ratione itaque atque inventore nesciunt minus eaque sint nemo, fuga ipsam iure! Dolores omnis neque quia accusamus ut et quae facilis incidunt necessitatibus. Doloremque iure itaque necessitatibus architecto quibusdam, ipsum rem minus reiciendis quis consequatur veritatis sequi, reprehenderit aspernatur nam cumque magnam, voluptates ipsam facere. Dolorum harum ab aut, voluptates impedit accusantium, rerum neque autem id inventore cum porro? Incidunt repellat earum fugiat quos maiores, minima velit? Maiores porro eos quasi repellendus qui atque quod laboriosam expedita consequuntur dolore neque ipsum et voluptatem, exercitationem nihil sint asperiores, natus ducimus repellat excepturi labore tempora? Reprehenderit dolores itaque sed incidunt odit aut iure nemo distinctio ut, nihil cum omnis cupiditate eos soluta? Distinctio autem dolorem provident aut cum, voluptas inventore facere exercitationem eligendi iusto consequatur nemo blanditiis sed laboriosam minima quasi officiis! Voluptatum earum sequi quasi porro rem! Consequatur ullam aliquid deserunt quaerat tenetur esse praesentium error possimus odit dolor at recusandae optio nostrum reprehenderit rem quo, delectus a id explicabo accusamus accusantium cumque laudantium. Distinctio assumenda vel delectus. Sunt, ab. Dicta consectetur cupiditate commodi. Sit fugiat fugit placeat dolore distinctio nulla recusandae odio eligendi earum error optio, esse adipisci ipsam repellendus non minus. Voluptas quae consequuntur nam nesciunt quo sapiente nostrum nemo rem quas aut qui, recusandae nobis quos iste voluptatem error ducimus. Accusantium ea corrupti, soluta dolorem et ipsam, cumque consectetur qui eum minima iste delectus perferendis. Natus numquam ipsam, optio inventore quam molestiae eligendi voluptatibus! Modi, soluta velit voluptates ex ut sequi officia ullam fugiat qui consectetur accusantium vero sit iusto laudantium temporibus error atque quae, repellendus nostrum doloribus quos eum! Fugit praesentium vitae suscipit sed. Ullam modi soluta unde consequuntur earum. Mollitia eveniet recusandae possimus, dolor itaque corporis nihil officia vero. Ut perferendis vel expedita accusamus, soluta hic unde velit! Magnam ipsam ab necessitatibus sit distinctio quos neque, aut modi facere molestiae voluptas a, quas nesciunt nam fugit recusandae fugiat optio labore sed est consequatur? Nostrum ipsa quidem corrupti sunt harum, sequi, qui maxime cum asperiores inventore, quia unde molestias! Ipsum quaerat sunt sit aspernatur quia cum quis assumenda fugit possimus tempore inventore autem minima odio delectus, necessitatibus, corporis voluptas corrupti voluptate id, consectetur omnis rem architecto repellendus officiis! Harum, corrupti? Odio voluptatum beatae soluta cupiditate a tempore exercitationem suscipit cum? Laborum quo totam vitae porro iste, temporibus ipsa blanditiis at, enim consectetur quia quasi, quam sint ipsum consequatur! Dignissimos libero quam officia nulla vel maiores, consequatur nobis repellendus exercitationem animi nam voluptatibus, assumenda nostrum fugiat architecto ea quas odio expedita! Ipsum numquam dolores cum deserunt deleniti facere in autem magnam, ut, obcaecati fugiat, ratione a dolorem ea quod consequatur vel tenetur cumque ullam modi illum nisi quos. Explicabo nihil, hic a repellendus totam id corrupti velit magnam incidunt quas voluptate quod, sint assumenda impedit quae quisquam enim quasi ducimus molestias, porro illum nobis ut nostrum? Aliquid provident odit, odio ratione, accusamus quo maiores ab inventore blanditiis labore earum iste fugit officia, unde expedita? Unde soluta perspiciatis quis cum molestiae, iusto temporibus iste quae est enim magni officia sit beatae minima hic nesciunt quod sed deleniti perferendis vero laborum doloremque nobis! Hic veniam qui rerum fugiat error beatae adipisci blanditiis! Quibusdam similique minima temporibus, fugit at beatae nemo consectetur architecto voluptates sapiente iure, quo asperiores, expedita necessitatibus ducimus pariatur quae dolorum modi cumque! Blanditiis, nemo id repellat qui nam fuga. Laudantium sit delectus saepe at iure ea numquam nam, deserunt tenetur officiis ad, sint consequatur ullam perspiciatis omnis possimus debitis ab sapiente ratione hic? Voluptatibus repudiandae architecto quibusdam corrupti, provident culpa quas reiciendis ipsa, fugit hic consequatur ex numquam qui voluptates quos magni. Cupiditate quas non aperiam molestias voluptatibus, deleniti fugit mollitia ipsam modi harum fugiat nihil voluptatem animi vel tempore deserunt nobis exercitationem magnam molestiae? Atque fugit, perferendis est commodi delectus ducimus. Quibusdam numquam sint praesentium aut dolor, libero voluptate a adipisci velit! Quo praesentium, officia alias at omnis quibusdam, ratione nostrum placeat laudantium aut optio dicta repellendus rerum asperiores quasi iure sunt consectetur laboriosam qui eligendi aperiam provident rem reiciendis. Corrupti dolorem laboriosam molestias odio ipsam molestiae ab sapiente at consectetur, natus excepturi velit aliquam aliquid, ut vitae accusamus ex vel quidem qui totam voluptas consequatur maiores exercitationem? Esse similique earum autem atque suscipit iusto, reiciendis maiores vel dicta? Dolor tempora adipisci iure rerum sunt fugiat id beatae ratione facilis. Totam beatae labore eligendi quidem! Enim aspernatur delectus laboriosam?</p> 
+</body>
+</html>
