@@ -5,27 +5,32 @@ body {
     color: #eeeeee; /* Light gray text color */
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    padding: 100px;
-    
+    padding: 50px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 h1 {
     font-size: 42px;
     margin-bottom: 20px;
+    color: #2c3e50; /* Golden yellow */
 }
 
 h2, h3 {
     font-size: 30px;
     margin-bottom: 20px;
-    color: #3a5a7c; 
+    color: #344f6b; /* Coral red */
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
+    /* margin-bottom: 20px; */
 }
 
 a {
-    color: #3a5a7c; 
-    text-decoration: underline;
+    color: #6b5b95; /* Purple */
 }

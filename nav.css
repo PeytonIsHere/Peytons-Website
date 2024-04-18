@@ -48,8 +48,8 @@
 
 /* Hover effect for navbar links */
 .navbar a:hover {
-  background-color: gray;
-  border-radius: 5px;
+  text-decoration: underline;
+  color: #3a5a7c; 
 }
 
 /* Hide nav-links by default */
